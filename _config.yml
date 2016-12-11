@@ -1,7 +1,7 @@
 # Site wide configuration
 
 title: cchcc
-locale: en_US
+locale: en
 description: 그거시인생
 logo: site-logo.png
 search: true
