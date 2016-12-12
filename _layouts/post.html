@@ -9,11 +9,36 @@
 
 <body id="post">
 
-{% include navigation.html %}
+  <div class="navigation-wrapper">
+  	<nav role="navigation" id="site-nav" class="animated drop">
+  	    <ul>
+        {% for link in site.data.navigation %}
+  		    {% if link.url contains 'http' %}
+  		        {% assign domain = '' %}
+  		        {% else %}
+  		        {% assign domain = site.url %}
+  		    {% endif %}
+  		    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+  		  {% endfor %}
+  	    </ul>
+  	</nav>
+  </div><!-- /.navigation-wrapper -->
+
+  {% include browser-upgrade.html %}
+
+  <header class="masthead">
+    <div class="wrap">
+      <h1 class="site-title animated fadeIn"><a href="{{ site.url }}/">{{ site.title }}</a></h1>
+		  <h2 class="site-description animated fadeIn" itemprop="description">{{ site.description }}</h2>
+    </div>
+  </header><!-- /.masthead -->
+
+  <div class="js-menu-screen menu-screen"></div>
 
 <div id="main" role="main">
   <article class="hentry">
     {% if page.image.feature %}<img src="{{ site.url }}/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}" {% if site.logo == null %}style="margin-top:0;"{% endif %}>{% if page.image.credit %}<p class="image-credit">Image credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></p>{% endif %}{% endif %}
+    {% if page.image.url %}<img src="{{ page.image.url }}" class="entry-feature-image" alt="{{ page.title }}" {% if site.logo == null %}style="margin-top:0;"{% endif %}>{% if page.image.credit %}<p class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></p>{% endif %}{% endif %}
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
