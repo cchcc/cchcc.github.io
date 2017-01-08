@@ -158,7 +158,7 @@ Dagger 보다는 Kodein 을 추천합니다.
 
 ---
 
-- [Kodein을 이용한 Kotlin 의존성 주입 - Part 1]({{ site.url }}/blog/Kodein을-이용한-Kotlin-의존성-주입-Part1/)
+- [Kodein을 이용한 Kotlin 의존성 주입 - Part 1]({{ site.url }}/blog/Kodein%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-Kotlin-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85-Part1/)
 - Kodein을 이용한 Kotlin 의존성 주입 - Part 2
 
 참고 문서 : [https://salomonbrys.github.io/Kodein/](https://salomonbrys.github.io/Kodein/)
