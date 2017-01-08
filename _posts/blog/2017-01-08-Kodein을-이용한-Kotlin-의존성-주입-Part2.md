@@ -147,7 +147,7 @@ class Computer : LazyKodeinAware {
 ## Dagger 와 비교
 Java 쪽에서 이미 유명한 의존성 주입 라이브러리인 [Dagger](https://google.github.io/dagger/)
 역시 Kotlin 에서 아주 잘 돌아갑니다. 두가지를 비교해보자면 Kodein 은 Dagger 에 비해 가볍고 배우기도
-사용하기도 쉽고 좀더 직관적입니다. 다만 의존성의 의존성 관계가 있을경우 Dagger 는 이를 컴파일 타임에
+사용하기도 쉽고 좀더 직관적입니다. 다만 필요한 의존성 충분하지 않을 경우 Dagger 는 이를 컴파일 타임에
 잡아주지만 Kodein 은 런타임에 그냥 에러를 뱉어버립니다. 그런데 이게 간단한 단위테스트 한번만 해봐도
 체크할수 있는 부분이라 큰 단점은 아닌듯합니다. 결론은 Kotlin 에서 의존성 주입 라이브러리를 사용한다면
 Dagger 보다는 Kodein 을 추천합니다.
