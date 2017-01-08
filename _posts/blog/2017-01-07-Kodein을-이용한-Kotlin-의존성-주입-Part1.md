@@ -155,8 +155,29 @@ class Computer {
 }
 ```
 
+##### 의존성의 의존성 제공하기
+의존성이 또 다른 의존성을 가지고 있을경우 의존성을 받아올때의 방법과 동일하게 선언하면 됩니다.
+
+```kotlin
+class GPU
+class GraphicCard(val gpu: GPU)
+
+val kodein = Kodein {
+  bind<GPU>() with singleton { GPU() }  // 이줄을 나중에 선언해도 잘 동작함
+  bind<GraphicCard>() with singleton { GraphicCard(instance()) }
+}
+
+class Computer {
+  val graphicCard: GraphicCard = kodein.instance()
+}
+```
+
 이 외에도 스레드당 하나의 객체만 바인딩 하는 **Thread singleton binding** , 바인딩 시점이 아닌
 선언 시점에 객체를 생성하는 **Eager singleton binding** 등 다양한 종류가 있습니다.
 
+---
+
+- Kodein을 이용한 Kotlin 의존성 주입 - Part 1
+- [Kodein을 이용한 Kotlin 의존성 주입 - Part 2]({{ site.url }}/blog/Kodein을-이용한-Kotlin-의존성-주입-Part2/)
 
 참고 문서 : [https://salomonbrys.github.io/Kodein/](https://salomonbrys.github.io/Kodein/)
