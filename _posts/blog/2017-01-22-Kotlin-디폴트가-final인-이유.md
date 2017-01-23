@@ -44,7 +44,7 @@ Item 17: Design and document for inheritance or else prohibit it.
 상속이란걸 잘 쓴다는게 참 어렵네요. 보다보니 저런것들을 다 신경 써가면서 개발하느니 정말 필요한 부분에서만
 상속을 이용하고 그냥 final 쓰는게 낫겠다는 생각이 듭니다.
 
-Kotlin 을 이용하는 다른 개발자들은 어떻게 생각하는지 궁금 해졌습니다.
+Kotlin 을 사용하는 다른 개발자들은 어떻게 생각하는지 궁금 해졌습니다.
 
 ## open VS final
 
@@ -71,10 +71,10 @@ open 이냐 final 이냐 하는 [토론글](https://discuss.kotlinlang.org/t/cla
 
 <figure>
 	<img src="http://i.imgur.com/OtSxwJa.png" alt="image">
-	<figcaption>final 파가 약간더 우세</figcaption>
+	<figcaption>final 파가 약간 더 우세</figcaption>
 </figure>
 
-final 이 불편한 경우는 대체로 자바환경에서 사용되는 라이브러리나 프레임워크를 이용 될때이고 일반적인 언어
+final 이 불편한 경우는 대체로 자바환경에서 사용되는 라이브러리나 프레임워크를 이용할때이고 일반적인 언어
 사용 관점에서는 final 을 기본으로 가는게 맞는것 같아 보입니다. 하지만 Kotlin 을 이용하는 대부분의
 환경이 자바환경에서 자바를 대체하는 언어 용도로 사용하고 있기때문에 무시할수도 없으니...
 
