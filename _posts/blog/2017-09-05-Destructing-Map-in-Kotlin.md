@@ -5,7 +5,7 @@ excerpt: "Map 디스트럭쳐링 해보기"
 date: 2017-09-05
 author: cchcc
 categories: blog
-tags: [Kotlin, Destructuring, componentN]
+tags: [Kotlin, Destructuring]
 image:
   url: https://i.imgur.com/Nh3Idw3.gif
 comments: true
