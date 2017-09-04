@@ -3,7 +3,6 @@ layout: post
 title: Destructuring Map in Kotlin
 excerpt: "Map 디스트럭쳐링 해보기"
 date: 2017-09-05
-modified: 2017-09-05
 author: cchcc
 categories: blog
 tags: [Kotlin, Destructuring, componentN]
