@@ -7,7 +7,7 @@ author: cchcc
 categories: blog
 tags: [Kotlin, Destructuring]
 image:
-  url: https://i.imgur.com/Nh3Idw3.gif
+  url: http://i.imgur.com/Nh3Idw3.gif
 comments: true
 share: true
 ---
