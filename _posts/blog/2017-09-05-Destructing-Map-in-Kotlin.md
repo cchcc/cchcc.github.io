@@ -35,7 +35,7 @@ val (name, writer, pages, contents) = map
 #### Extensions 를 이용해서?
 
 Kotlin 에는 [Extensions](https://kotlinlang.org/docs/reference/exceptions.html) 라는 별도의 클래스 구현없이 함수를 추가할수 있는 기능이 있습니다.
-요걸 이용해 보자면,
+요걸 이용해 보자면,  
 
 ```kotlin
 operator fun Map<String, Any?>.component1(): String = this["name"] as String
@@ -48,7 +48,7 @@ val (name, writer, pages, contents) = map
 ```
 
 괜찮아 보이는듯 하지만 이렇게 해두면 `Map<String, Any?>` 타입의 destructuring 기능이 글로벌하게 못박아 버리는
-것이므로 썩 좋지는 않습니다. 그렇다고 사용하는 범위(scope) 를 한정해 주기위해 아래처럼
+것이므로 썩 좋지는 않습니다. 그렇다고 사용하는 범위(scope) 를 한정해 주기위해 아래처럼  
 
 ```kotlin
 class Logic {
@@ -66,11 +66,11 @@ class Logic {
 ```
 
 이렇게 하면 `Logic` 클래스의 범위에서만 사용 가능 하도록 적용이 되지만, `Logic` 외에 Destructuring 을 사용할 클래스마다
-*componentN* 함수들을 추가해 주자니 영 번거롭습니다.
+*componentN* 함수들을 추가해 주자니 영 번거롭습니다.  
 
 #### 상속(inherit)을 이용해서?
 
-**OOP** 를 배웠다면 사실 가장 먼저 떠오르는, 가장 쉬운 방법 일것 같습니다.
+***OOP*** 를 배웠다면 사실 가장 먼저 떠오르는, 가장 쉬운 방법 일것 같습니다.
 
 ```kotlin
 class Book(map: Map<String, Any?>) : HashMap<String, Any?>(map) {
@@ -84,8 +84,8 @@ class Book(map: Map<String, Any?>) : HashMap<String, Any?>(map) {
 val (name, writer, pages, contents) = Book(map)
 ```
 
-이 방법의 문제점은 다름아닌 **상속** 그 자체입니다. 우리는 이미 상속이 주는 단점에 대해 충분히 많은 글들을 봤고
-경험도 해왔을 뿐더러 지금 상황이 상속만이 해결할수 있는 **다형성(polymorphism)** 과 관련된 문제도 아닙니다.  
+이 방법의 문제점은 다름아닌 ***상속*** 그 자체입니다. 우리는 이미 상속이 주는 단점에 대해 충분히 많은 글들을 봤고
+경험도 해왔을 뿐더러 지금 상황이 상속만이 해결할수 있는 ***다형성(polymorphism)*** 과 관련된 문제도 아닙니다.  
 그러므로 이 방법은 그냥 안쓰는걸로...
 
 #### 컴포지션(composition) 으로?
@@ -167,7 +167,7 @@ fun Map<String, Any?>.destructuringToBookLink(): MapToBookLinkDestructurer = obj
 }
 ```
 
-각 destructuring 할 interface 에 map 을 멤버로 추가하고 글로벌 extension 함수 하나를 만들어서 익명 객체를 리턴하도록 만들었습니다.
+각 destructuring 할 interface 에 *map* 을 멤버로 추가하고 글로벌 extension 함수 하나를 만들어서 익명 객체를 리턴하도록 만들었습니다.
 이렇게 해두면 사용할때 아래처럼 범위에 관계없이 필요한 destructuring 을 사용할수 있습니다.
 
 ```kotlin
